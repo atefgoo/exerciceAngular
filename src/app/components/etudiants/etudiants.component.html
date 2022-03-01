@@ -1,0 +1,20 @@
+<h2>Liste des Etudiats</h2>
+<br>
+<table class="table table-condensed">
+    
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let etudiant of etudiants">
+            <td>{{etudiant.id}}</td>
+            <td>{{etudiant.nom}}</td>
+            <td>{{etudiant.prenom}}</td>
+            <td><button class="btn btn-danger" (click)="delete(etudiant.id)">delete</button></td>
+        </tr>
+    </tbody>
+</table>
